@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>CLEISTHENES</title>
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">CLEISTHENES</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Entire -->
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>도민광장</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item - Voting -->
+      <li class="nav-item">
+        <a class="nav-link" href="voting.html">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>도민투표</span></a>
+      </li>
+
+      <!-- Nav Item - Suggestion -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-table"></i>
+          <span>도민제안</span>
+        </a>
+        <div id="collapsePages1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="suggestion.html">제안목록</a>
+            <a class="collapse-item" href="suggest.html">제안하기</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>정보</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="wallet.html">내계정</a>
+            <a class="collapse-item" href="register.html">계정생성</a>
+            <a class="collapse-item" href="forgot-password.html">비밀번호찾기</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="검색 또는 입력" aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="검색 또는 입력" aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter">3+</span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  알람
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">2019년 8월 23일</div>
+                    <span class="font-weight-bold">당신의 제안에 대한 심사가 진행되고 있습니다!</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-success">
+                      <i class="fas fa-donate text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">2019년 8월 26일</div>
+                    당신의 제안에 대한 투표가 시작되었습니다!
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-warning">
+                      <i class="fas fa-exclamation-triangle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">2019년 9월 29일</div>
+                    당신의 제안이 많은 수의 득표를 얻어 의회의 상정이 되었습니다!
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">알람 더보기</a>
+              </div>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- 지갑 wallet -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link" href="#" id="userDropdown" role="button" >
+               <button id="request-address">wallet</button>
+               <li role="presentation">
+                <p id="response-address" ></p>
+               </li>
+              </a>
+            </li>
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">제안목록</h1>
+            <a href="suggest.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">제안하기</a>
+          </div>
+
+          <p class="mb-4">제안목록에서는 수많은 사람들의 제안사항에 대해서 볼 수 있고 이에 대해 투표를 할 수 있습니다. 의견을 모아 정책을 만드세요.
+
+          <!-- 도민의 제안사항 -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">도민의 제안사항</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>제안명</th>
+                      <th>제안내용</th>
+                      <th>지역</th>
+                      <th>득표수</th>
+                      <th>작성일</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>제안명</th>
+                      <th>제안내용</th>
+                      <th>지역</th>
+                      <th>득표수</th>
+                      <th>작성일</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>불법계곡영업시설 철거</td>
+                      <td>도민들의 평안한 휴가를 위해 계곡을 불법 점거하는 가게들을 처벌해주세요</td>
+                      <td>용인시</td>
+                      <td>20163</td>
+                      <td>2016/04/25</td>
+                    </tr>
+                    <tr>
+                      <td>OO초등학교 운동장 설치</td>
+                      <td>안녕하세요 초등학교를 다니고 있는 6학년 홍길동입니다. 운동장이 필요해요</td>
+                      <td>안양시</td>
+                      <td>563</td>
+                      <td>2016/07/25</td>
+                    </tr>
+                    <tr>
+                      <td>도심 건설관리기준 강화</td>
+                      <td>도심을 돌아다니면 위험한 건설현장이 많은데 관리 기준을 강화시키길 바랍니다.</td>
+                      <td>하남시</td>
+                      <td>42760</td>
+                      <td>2014/01/12</td>
+                    </tr>
+                    <tr>
+                      <td>OO시를 특례시로</td>
+                      <td>행정수요가 특례시만큼 많기 때문에 적절한 세금 사용을 위해 특례시 전환 촉구합니다.</td>
+                      <td>성남시</td>
+                      <td>56874</td>
+                      <td>2017/03/29</td>
+                    </tr>
+                    <tr>
+                      <td>하수처리시설 개선</td>
+                      <td>동네 주변 시설이 노후화되고 악취가 심합니다.</td>
+                      <td>김포시</td>
+                      <td>8956</td>
+                      <td>2013/11/28</td>
+                    </tr>
+                    <tr>
+                      <td>독도기념주화 제작</td>
+                      <td>나라의 안녕과 주권을 위해 독도기념주화를 제작해야합니다.</td>
+                      <td>양평군</td>
+                      <td>1963</td>
+                      <td>2017/12/02</td>
+                    </tr>
+                    <tr>
+                      <td>애견샵 조사</td>
+                      <td>강아지를 학대하는 애견샵을 조사해 처벌해주세요</td>
+                      <td>안산시</td>
+                      <td>7396</td>
+                      <td>2017/08/06</td>
+                    </tr>
+                    <tr>
+                      <td>도로시설 확충</td>
+                      <td>추석 기간 수많은 차량들이 지나다니는 도로가 작아 많이 막혔습니다.</td>
+                      <td>안성시</td>
+                      <td>102536</td>
+                      <td>2015/10/14</td>
+                    </tr>
+                    <tr>
+                      <td>스포츠 시설 설치</td>
+                      <td>늘어나는 신도시에 비해 사람들의 편의를 위한 스포츠 시설이 턱없이 부족합니다.</td>
+                      <td>화성시</td>
+                      <td>1932</td>
+                      <td>2014/09/15</td>
+                    </tr>
+                    <tr>
+                      <td>영양사 처우 개선</td>
+                      <td>평택에 한 고등학교 영양사입니다. 영양사의 근무 환경이나 처우를 개선해주세요.</td>
+                      <td>평택시</td>
+                      <td>8476</td>
+                      <td>2013/12/13</td>
+                    </tr>
+                    <tr>
+                      <td>교도소 설치 반대</td>
+                      <td>가족들의 삶과 일상생활 속 치안이 교도소를 설치되면 위협받습니다!</td>
+                      <td>파주시</td>
+                      <td>78604</td>
+                      <td>2013/12/19</td>
+                    </tr>
+                    <tr>
+                      <td>남한산성 보호</td>
+                      <td>남한산성이 산에서 몰래 담배피우고 취식을 하는 사람들 때문에 자연이 훼손되고 있습니다.</td>
+                      <td>광주시</td>
+                      <td>34718</td>
+                      <td>2018/03/03</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; CLEISTHENES 2019</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">로그아웃 하시겠습니까?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">'로그아웃'을 하시면 현재 상태를 벗어나게 됩니다.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">취소</button>
+          <a class="btn btn-primary" href="login.html">로그아웃</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+
+  <!-- 지갑연동 -->
+
+
+</body>
+
+</html>
