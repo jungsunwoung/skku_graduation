@@ -197,14 +197,7 @@
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- 지갑 wallet -->
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link" href="#" id="userDropdown" role="button" >
-               <button id="request-address">wallet</button>
-               <li role="presentation">
-                <p id="response-address" ></p>
-               </li>
-              </a>
-            </li>
+
           </ul>
 
         </nav>
@@ -217,8 +210,9 @@
           <p class="mb-4">
             지갑 생성을 위해 userkey를 입력해 주세요
 
-            <input type="text" name="" value="">
-            <button type="button" name="button" value="create" onclick="generateWallet"></button>
+            <input id="userkey" type="text" name="" value="">
+  <button id="request-address" onclick="generate_wallet();">Create</button>
+
 
           <!-- Content Column -->
           <div class="col-lg-12 mb-4">
@@ -282,7 +276,7 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">'로그아웃'을 하시면 현재 상태를 벗어나게 됩니다.</div>
+        <div class="modal-body">'로그아웃'을 하시면 현재 상태를 벗어나게 됩니다..</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">취소</button>
           <a class="btn btn-primary" href="login.html">로그아웃</a>
