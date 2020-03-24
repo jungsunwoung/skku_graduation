@@ -4,26 +4,25 @@ import "./ownable.sol";
 import "./SafeMath.sol";
 
 contract Election is Ownable {
-    
-    uint nowtotalvote = 0;
 
-    mapping (uint => uint) candidate; 
-    mapping (address => uint) vote_right;
+    uint nowTotalVote = 0;
 
-    function candidate_received(uint candidatenum) view external onlyOwner returns(uint) {  // 각 투표자 투표받은거
-        return candidate[candidatenum];
+    mapping (uint => uint) candidate;
+    mapping (address => uint) voteRight;
+
+    function candidateReceived(uint candidateNum) view external onlyOwner returns(uint) {  // 각 투표자 투표받은거
+        return candidate[candidateNum];
     }
 
-    function showtotalvote() view public returns (uint){ 
-        return nowtotalvote;
+    function showTotalVote() view public returns (uint){
+        return nowTotalVote;
     }
 
-    function vote(uint candidatenum) public {
-        require(vote_right[msg.sender] == 0);
-        vote_right[msg.sender]=1;
-        candidate[candidatenum] += 1;
-        nowtotalvote++;
+    function vote(uint candidateNum) public {
+        require(voteRight[msg.sender] == 0);
+        voteRight[msg.sender]=1;
+        candidate[candidateNum] += 1;
+        nowTotalVote++;
     }
-    
+
 }
-
